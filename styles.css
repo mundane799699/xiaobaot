@@ -1,0 +1,232 @@
+/* 设置整个网页的基础样式，包括字体、外边距、内边距、布局和背景颜色 */
+body {
+  font-family: Arial, sans-serif; /* 字体为Arial, 备用字体为sans-serif */
+  margin: 0; /* 移除所有外边距 */
+  padding: 0; /* 移除所有内边距 */
+  display: flex; /* 使用Flexbox布局 */
+  flex-direction: column; /* 垂直排列子元素 */
+  align-items: center; /* 水平居中对齐子元素 */
+  background-color: #f8f6f4; /* 设置背景颜色 */
+  color: #333; /* 设置默认文本颜色 */
+}
+
+/* 设置页眉样式 */
+header {
+  text-align: center; /* 文本居中对齐 */
+  padding: 20px; /* 添加内边距 */
+  background-color: #f8f6f4; /* 设置背景颜色 */
+  color: #b14b43; /* 设置文本颜色 */
+  width: 100%; /* 宽度为100% */
+}
+
+/* 设置页眉中的主标题样式 */
+header h1 {
+  font-size: 300%; /* 设置字体大小 */
+}
+
+/* 设置页眉中的副标题样式 */
+header p {
+  font-size: 200%; /* 设置字体大小 */
+}
+
+/* 设置页眉中的输入框样式 */
+header input {
+  margin-top: 10px; /* 上外边距 */
+  padding: 10px; /* 内边距 */
+  width: 80%; /* 宽度为80% */
+  max-width: 800px; /* 最大宽度为800px */
+  border: 1px solid #ccc; /* 边框样式和颜色 */
+  border-radius: 5px; /* 边框圆角 */
+  font-size: 24px; /* 字体大小 */
+}
+
+/* 设置提交按钮样式 */
+#submit > a {
+  display: block; /* 块级元素 */
+  margin-top: 10px; /* 上外边距 */
+  font-size: 24px; /* 字体大小 */
+  text-decoration: none; /* 移除下划线 */
+}
+
+#submit > a:hover {
+  background-color: #ddd; /* 悬停时的背景颜色 */
+}
+
+/* 设置标签容器的样式 */
+#tags {
+  max-width: 1000px;
+  display: flex; /* 使用Flexbox布局 */
+  flex-wrap: wrap; /* 自动换行 */
+  justify-content: center; /* 居中对齐子元素 */
+  margin: 20px; /* 上下外边距 */
+}
+
+/* 设置单个标签的样式 */
+.tag {
+  margin: 10px; /* 外边距 */
+  padding: 10px 15px; /* 内边距 */
+  background-color: #eee; /* 背景颜色 */
+  font-size: 24px; /* 字体大小 */
+  color: #b14b43; /* 字体颜色 */
+  border: 1px dashed #888; /* 边框样式和颜色 */
+  border-radius: 5px; /* 边框圆角 */
+  cursor: pointer; /* 鼠标悬停时显示为指针 */
+}
+
+/* 设置单个标签在鼠标悬停时的样式 */
+.tag:hover {
+  background-color: #ddd; /* 悬停时的背景颜色 */
+}
+
+.tag.selected {
+  background-color: #aaa;
+  color: white;
+}
+
+#card-count {
+  color: #00e;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* 设置内容区域的样式 */
+#content {
+  display: grid; /* 使用Grid布局 */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* 自适应列宽和列数 */
+  gap: 20px; /* 网格间距 */
+  width: 80%; /* 宽度为80% */
+  max-width: 1200px; /* 最大宽度为1200px */
+  margin-bottom: 20px; /* 下外边距 */
+}
+
+/* 设置卡片的样式 */
+.card {
+  margin: 3px;
+  padding: 3px;
+  background-color: white; /* 背景颜色 */
+  border-radius: 10px; /* 边框圆角 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  overflow: hidden; /* 内容溢出隐藏 */
+  transition: transform 0.2s; /* 变换的过渡效果 */
+  display: flex; /* 使用Flexbox布局 */
+  flex-direction: column; /* 垂直排列子元素 */
+  height: 700px; /* 高度自动调整 */
+}
+
+/* 设置卡片在鼠标悬停时的样式 */
+.card:hover {
+  transform: scale(1.05); /* 缩放效果 */
+}
+
+/* 设置卡片内图片的样式 */
+.card img {
+  width: 23%; /* 宽度为23% */
+  height: auto; /* 高度自动调整 */
+  float: left; /* 左浮动 */
+  margin: 5px; /* 外边距 */
+}
+
+/* 设置卡片内容的样式 */
+.card-content {
+  padding: 15px; /* 内边距 */
+  flex: 1; /* 占据剩余空间 */
+  display: flex; /* 使用Flexbox布局 */
+  flex-direction: column; /* 垂直排列子元素 */
+  justify-content: space-between; /* 在主轴方向上均匀分布子元素 */
+}
+
+/* 设置卡片内容中的主标题样式 */
+.card-content h1 {
+  margin: 10px 0; /* 上下外边距 */
+  font-size: 24px; /* 字体大小 */
+  color: #b14b43; /* 字体颜色 */
+}
+
+/* 设置卡片内容中的次标题样式 */
+.card-content h3 {
+  margin: 0 10px 10px 0; /* 上右下外边距 */
+  font-size: 26px; /* 字体大小 */
+  color: #b14b43; /* 字体颜色 */
+  text-align: right; /* 右对齐 */
+}
+
+/* 设置卡片内容中的次标题在鼠标悬停时的样式 */
+.card-content h3:hover {
+  color: red; /* 鼠标悬停时字体颜色变为红色 */
+}
+
+/* 设置卡片内容中的段落样式 */
+.card-content p {
+  font-size: 20px; /* 字体大小 */
+  color: #777; /* 字体颜色 */
+  line-height: 180%; /* 行高 */
+}
+
+/* 设置卡片内容中的链接样式 */
+.card-content a {
+  display: block; /* 块级元素 */
+  margin-top: 10px; /* 上外边距 */
+  color: #ff9900; /* 字体颜色 */
+  text-decoration: none; /* 移除下划线 */
+}
+
+/* 设置数据单元格样式 */
+.datacell {
+  text-align: right; /* 文本右对齐 */
+  font-size: 36px; /* 字体大小 */
+  color: rgba(0, 0, 255, 0.392); /* 字体颜色 */
+}
+
+/* 设置单词样式 */
+span.word {
+  color: #bbb; /* 字体颜色 */
+}
+
+/* 设置主内容区域样式 */
+.maincontent {
+  height: 500px; /* 高度为500px */
+  overflow: hidden; /* 溢出内容隐藏 */
+  margin-bottom: 20px; /* 下外边距 */
+}
+
+/* 设置页脚内容样式 */
+.footer-content {
+  background-color: #f1f1f1; /* 背景颜色 */
+  padding: 20px; /* 内边距 */
+  text-align: center; /* 文本居中对齐 */
+}
+
+/* 设置友情链接样式 */
+.friend-links {
+  margin-top: 20px; /* 上外边距 */
+}
+
+.friend-links h4 {
+  margin-bottom: 10px; /* 下外边距 */
+}
+
+.friend-links ul {
+  list-style-type: none; /* 列表样式为无 */
+  padding: 0; /* 内边距为0 */
+}
+
+.friend-links li {
+  display: inline; /* 行内展示 */
+  margin: 0 10px; /* 外边距 */
+}
+
+.friend-links a {
+  text-decoration: none; /* 移除下划线 */
+  color: #000; /* 字体颜色 */
+}
+
+.friend-links a:hover {
+  text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
